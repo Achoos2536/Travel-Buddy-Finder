@@ -12,12 +12,16 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <Link to="/" className="text-2xl font-bold">Task Manager</Link>
+      <Link to="/" className="text-2xl font-bold">Travel Buddy</Link>
       <div>
         {user ? (
           <>
-            <Link to="/tasks" className="mr-4">Tasks</Link>
-            <Link to="/profile" className="mr-4">Profile</Link>
+            <Link to="/trips" className="mr-4">Browse Trips</Link>
+            {user.role === 'tripCreator' && (
+              <Link to="/create-trip" className="mr-4">Create Trip</Link>
+            )}
+            <Link to="/join-requests" className="mr-4">Join Requests</Link>
+            
             <button
               onClick={handleLogout}
               className="bg-red-500 px-4 py-2 rounded hover:bg-red-700"
