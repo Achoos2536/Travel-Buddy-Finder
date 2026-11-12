@@ -5,6 +5,8 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Tasks from './pages/Tasks';
 import Trips from './pages/Trips';
+import CreateTrip from './pages/CreateTrip';
+import JoinRequests from './pages/JoinRequests';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Trips />} />
         <Route path="/trips" element={<Trips />} />
+        <Route path="/create-trip" element={<CreateTrip />} />
+        <Route path="/join-requests" element={<JoinRequests />} />
       </Routes>
     </Router>
   );
