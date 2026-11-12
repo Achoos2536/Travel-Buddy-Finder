@@ -14,10 +14,11 @@ const createTrip = async (req, res) => {
         if (
             !Number.isFinite(Date.parse(startDate)) ||
             !Number.isFinite(Date.parse(endDate)) ||
-            new Date(endDate) < new Date(startDate)
+            new Date(endDate) < new Date(startDate) ||
+            new Date(startDate) < new Date(new Date().setHours(0, 0, 0, 0))
         ) {
             return res.status(400).json({
-                message: 'Invalid trip dates'
+                message: 'Invalid trip dates or start date is in the past'
             });
         }
 
