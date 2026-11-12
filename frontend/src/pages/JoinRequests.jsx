@@ -16,7 +16,8 @@ const JoinRequests = () => {
             Authorization: `Bearer ${user.token}`
           }
         });
-        setTrips(response.data);
+        const myTrips = response.data.filter((trip) => trip.creatorId === user.id);
+        setTrips(myTrips);
       } catch (error) {
         alert('Unable to load trips.');
       }
