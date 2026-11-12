@@ -13,8 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 
-//#disable for now as old task route not loading controller
-// app.use('/api/tasks', require('./routes/taskRoutes'));
 
 // Export the app object for testing
 if (require.main === module) {
