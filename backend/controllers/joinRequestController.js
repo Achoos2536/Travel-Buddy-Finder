@@ -102,4 +102,19 @@ const getJoinRequests = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
-module.exports = { requestToJoin, updateJoinRequest, getJoinRequests };
+// Traveller views their own join requests
+const getMyJoinRequests = async (req, res) => {
+    try {
+        const requests = await JoinRequest.find({
+            travellerId: req.user._id
+        }).populate('tripId');
+
+        res.status(200).json(requests);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        });
+    }
+};
+
+module.exports = { requestToJoin, updateJoinRequest, getJoinRequests, getMyJoinRequests };

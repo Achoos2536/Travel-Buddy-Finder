@@ -3,7 +3,8 @@ const express = require('express');
 const {
     requestToJoin,
     updateJoinRequest,
-    getJoinRequests
+    getJoinRequests,
+    getMyJoinRequests
 } = require('../controllers/joinRequestController');
 
 const {
@@ -36,4 +37,12 @@ router.get(
     authorizeRoles('tripCreator'),
     getJoinRequests
 );
+// Traveller views their own requests
+router.get(
+    '/my-requests',
+    protect,
+    authorizeRoles('traveller'),
+    getMyJoinRequests
+);
+
 module.exports = router;
