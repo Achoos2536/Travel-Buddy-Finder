@@ -1,6 +1,7 @@
-**Travel Buddy Finder Application Overview:Travel Buddy Finder is a web application designed to connect travellers who are interested in joining trips organised by other users. The application supports two user roles which includes the Traveller and Trip Creator. Travellers can browse available trips and submit requests to join them. Trip Creators can create trips, view requests for their own trips, and approve or reject those requests.The project is developed for assignment purposes as part of QUT's IFQ636 Software Management unit, using Agile project management practices, GitHub version control, and software testing.. **
+Travel Buddy Finder Application Overview:
+Travel Buddy Finder is a web application designed to connect travellers who are interested in joining trips organised by other users. The application supports two user roles which includes the Traveller and Trip Creator. Travellers can browse available trips and submit requests to join them. Trip Creators can create trips, view requests for their own trips, and approve or reject those requests.The project is developed for assignment purposes as part of QUT's IFQ636 Software Management unit, using Agile project management practices, GitHub version control, and software testing. 
 
-**This apps **contain** the following features:**
+This apps contain the following features:
 
 General -
 * Sign up
